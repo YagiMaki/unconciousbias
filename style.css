@@ -1,0 +1,502 @@
+@charset "utf-8"; 
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root { /* 色変更はこちら IE非対応 */
+  --body-color: #000;
+  --link-color: #666;
+  --linkhover-color: #999; 
+  --button-color: #555;
+  --label-color: #c8e6fa;
+  --back-color: #f1f1f1;
+  --border-color: #f4f4f4;
+  --white-color: #fff;
+}
+
+header {
+  background-color: #C2C2C2;
+  color: #fff;
+}
+
+header h1 {
+  font-size: 1em;
+  font-weight: normal;
+  text-align: center;
+  padding: 10px;
+  height: 5vh;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  background:var(--white-color);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+img {
+	max-width:100%;
+	height: auto;/*高さ自動*/
+  border-radius: 10%;
+}
+
+/* h1 {
+  font-size: 1.5em;
+  font-weight: normal;
+  text-align: center;
+} */
+
+h2 {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h3 {
+  position: relative;
+  max-width: 90%;
+  margin: 10px auto 10px auto;
+  text-align: center;
+  font-size: 1.25em; /* テキストサイズの指定 */ 
+  height: 8vh;
+}
+
+p {
+  margin: 0 auto 0 auto; 
+  width: 80%;
+  padding: 8px;
+  font-size: 1.25em;
+  overflow: hidden;
+}
+
+a {
+  margin: 0 auto 20px auto; 
+  width: 80%;
+  padding: 8px;
+  color: #fff;
+  overflow: hidden;
+}
+
+section {
+  display: none;
+  background:var(--white-color);
+  padding: 2%;
+  max-width: 90%;
+  margin: 0 auto;
+  height: 92vh;
+  width: calc(100% - 16px - 16px);
+}
+
+#que01{
+  background-image: url('./img/bias01.jpg');
+}
+
+#que02{
+  background-image: url('./img/bias02.jpg');
+}
+
+#que03{
+  background-image: url('./img/bias03.jpg');
+}
+
+#que04{
+  background-image: url('./img/bias04.jpg');
+}
+
+#que05{
+  background-image: url('./img/bias05.jpg');
+}
+
+#que06{
+  background-image: url('./img/bias06.jpg');
+}
+
+#que07{
+  background-image: url('./img/bias07.jpg'); 
+}
+
+#que08{
+  background-image: url('./img/bias08.jpg'); 
+}
+
+#que09 {
+  background-image: url('./img/bias09.jpg'); 
+}
+
+#que01,
+#que02,
+#que03,
+#que04,
+#que05,
+#que06,
+#que07,
+#que08,
+#que09 {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 95vh; /* 必要に応じて高さを調整してください */
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto 0 auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #000; /* テキストの色 */
+}
+
+footer {
+  text-align: center;
+  height: 5vh;
+}
+
+/*スタート画像
+-------------------------------------*/
+
+.mainimg  {
+  position: relative; /* 追加 */
+  height: 300px;
+  overflow: hidden;
+  border-radius: 15px; /* 角丸を適用 */
+}
+
+.main_img {
+  z-index:10;
+  opacity: 0;
+  width: 100%;
+  height: 300px;
+  background-position: center center;
+  background-repeat: repeat;
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-animation: anime 36s 0s infinite;
+  animation: anime 36s 0s infinite; 
+}
+
+.main_img:nth-of-type(2) {
+  -webkit-animation-delay: 6s;
+  animation-delay: 6s; }
+
+.main_img:nth-of-type(3) {
+  -webkit-animation-delay: 12s;
+  animation-delay: 12s; }
+
+.main_img:nth-of-type(4) {
+  -webkit-animation-delay: 18s;
+  animation-delay: 18s; }
+
+.main_img:nth-of-type(5) {
+  -webkit-animation-delay: 24s;
+  animation-delay: 24s; }
+
+.main_img:nth-of-type(6) {
+  -webkit-animation-delay: 30s;
+  animation-delay: 30s; }
+
+/* アニメーション */
+@keyframes slide {
+  0% {
+    top: 50%;
+  }
+  100% {
+    top: 50%;
+  }
+}
+
+@keyframes anime {
+      0% {
+            opacity: 0;
+        }
+        8% {
+            opacity: 1;
+        }
+        17% {
+            opacity: 1;
+        }
+        25% {
+            opacity: 0;
+            transform: scale(1.2) ;
+             z-index:9;
+        }
+        100% {
+            opacity: 0;
+        }
+}
+
+/* アニメーションが終了しても透明度を保持 */
+.main_img.animating {
+  animation-fill-mode: forwards;
+  opacity: 1;
+  animation-iteration-count: infinite; /* 無限に繰り返す */
+}
+
+/* アニメーションが実行中にクラスを追加 */
+.mainimg.animating .readtext {
+  opacity: 0;
+}
+
+.readtext {
+  position: absolute; /* 画像を基準に絶対位置に配置 */
+  top: 50%; /* 画像の上から50%の位置に配置 */
+  left: 50%; /* 画像の左から50%の位置に配置 */
+  transform: translate(-50%, -50%); /* 中央揃え */
+  width: 100%;
+  text-align: center;
+  font-size: 28px;
+  line-height: 2;
+  color: var(--white-color);
+  text-shadow: 1px 2px 3px var(--link-color); 
+  padding: 35px 0 35px 0;
+  opacity: 1; /* アニメーションの透明度と連動するように初期値を1に設定 */
+  z-index: 11; /* アニメーションより上に表示 */
+}
+
+
+
+/*チェックボックス
+-------------------------------------*/
+input[type="checkbox"] {
+  appearance: none;
+}
+
+.label { 
+  display: block; /* ブロックレベル要素化する */ 
+  margin: -5px auto;
+  width: 80%; 
+  background-color: #fff; /* マウスオーバー時の背景色を指定する */ 
+  text-align: center; /* テキストのセンタリングを指定 */
+  font-size: 1.5em; /* テキストサイズの指定 */ 
+  color: black; /* テキストの色を指定 */ 
+  line-height: 2em;  /* 行の高さを指定する  */
+  cursor: pointer; /* マウスカーソルの形（リンクカーソル）を指定する */ 
+  border-radius: 1em; /* 角丸を指定する */ 
+  height: 2em;  /* 行の高さを指定する  */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+} 
+
+input[type="checkbox"]:checked + label { 
+  background: #7697A8;/* マウス選択時の背景色を指定する */ 
+  color: #fff; /* マウス選択時のフォント色を指定する */ 
+}
+
+.label:hover { 
+  background-color: #E2EDF9; /* マウスオーバー時の背景色を指定する */ 
+}
+
+/*診断結果ボタン
+-------------------------------------*/
+.container {
+  display: flex;
+  flex-direction: row; /* 横に並べる */
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap; /* 横並びを維持 */
+}
+
+.abias, .bbias, .cbias, .dbias, .ebias {
+  width: 150px;
+  height: 100px;
+  border-radius: 15px;
+  border: none; /* ボーダーをなくす */
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+  margin: 0 10px; /* ボタン間のマージンを調整 */
+  font-size: 18px; /* テキストサイズを指定 */
+  font-weight: bold; /* フォントを太くする */
+  white-space: pre-line; /* 改行を適切に表示するために追加 */
+}
+
+@media (max-width: 300px) {
+  /* 画面が600px以下の場合、ボタンを縦に並べる */
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.abiasti, .bbiasti, .cbiasti, .dbiasti, .ebiasti {
+  width: 400px;
+  height: 60px;
+  margin: 50px auto 10px auto; 
+  border-radius: 15px;
+  border: none; /* ボーダーをなくす */
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+  font-size: 28px; /* テキストサイズを指定 */
+  font-weight: bold; /* フォントを太くする */
+  line-height: 2.15em;  /* 行の高さを指定する  */
+  white-space: pre-line; /* 改行を適切に表示するために追加 */
+}
+
+.abias,.abiasti {
+  background-color: #AB6765;
+}
+
+.bbias,.bbiasti {
+  background-color: #C9A15F;
+}
+
+.cbias,.cbiasti {
+  background-color: #78A19F;
+}
+
+.dbias,.dbiasti {
+  background-color: #9982A8;
+}
+
+.ebiasti {
+  background-color: #768CCC;
+}
+
+.ebias {
+  background-color: #768CCC;
+  margin-right: 0; /* 最後の要素には右側のマージンを適用しない */
+}
+
+.button {
+  width: 280px;
+  height: 50px;
+  background-color: #72728C;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 1em; /* テキストサイズの指定 */ 
+  color: #fff; /* テキストの色を指定 */ 
+  line-height: 2em;  /* 行の高さを指定する  */
+  cursor: pointer;
+  margin: 50px auto 0 auto;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+.button02 {
+  width: 280px;
+  height: 50px;
+  background-color: #8C7272;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 1em; /* テキストサイズの指定 */ 
+  color: #fff; /* テキストの色を指定 */ 
+  line-height: 2em;  /* 行の高さを指定する  */
+  cursor: pointer;
+  margin: 0 20px 0 0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+.button03 {
+  width: 280px;
+  height: 50px;
+  background-color: #72728C;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 1em; /* テキストサイズの指定 */ 
+  color: #fff; /* テキストの色を指定 */ 
+  line-height: 2em;  /* 行の高さを指定する  */
+  cursor: pointer;
+  /* margin: 50px auto 0 auto; */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+.button04 {
+  width: 280px;
+  height: 50px;
+  background-color: #666666;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 1em; /* テキストサイズの指定 */ 
+  color: #fff; /* テキストの色を指定 */ 
+  line-height: 2em;  /* 行の高さを指定する  */
+  cursor: pointer;
+  /* margin: 50px auto 0 auto; */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* 横方向に中央寄せ */
+  margin: 50px auto 0 auto;
+}
+
+
+/*円グラフ
+-------------------------------------*/
+
+ /* 横に並べるためのスタイル */
+ #mycanvasContainer {
+  display: flex;
+  justify-content: center; /* 横方向に中央揃え */
+}
+
+#mycanvas {
+  width: 350px; /* キャンバスの幅を固定 */
+  height: 350px;
+  margin-right: 20px; /* キャンバスとテキストの間隔 */
+}
+
+#resultText {
+  transform: translateY(18%);
+}
+
+
+/*デザイン
+-------------------------------------*/
+.h3fu {
+  position: relative;
+  max-width: 90%;
+  margin: 5px auto 0 auto;
+  text-align: center;
+  font-size: 1.25em; /* テキストサイズの指定 */ 
+  font-weight: bold;
+  height: 8vh;
+}
+
+.biasbox {
+  background:var(--white-color);
+  border-width: 1px;
+  border-color: gray;
+  border-style: solid;
+  border-radius: 15px;
+  padding: 10px;
+  max-width: 90%;
+  margin: 0 auto 15px auto;
+}
+
+.biasbox p {
+  width: 95%;
+  margin: 0 auto; /* 左右の余白を20pxに設定 */
+}
+
+.boldtext{
+  text-align: center;
+  font-weight: bold;
+  color: #000;
+}
+
+.small {
+  font-size: 15px; /* フォントサイズを小さく調整 */
+  /* padding: 5p 10px; パディングを小さく調整 */
+  /* text-align: right; */
+  text-align: center;
+  /* max-width: 90%;
+  padding: 0 2%; */
+  color: #a52a2a;
+  font-weight: bold;
+}
+
+
+/*コピーライト
+-------------------------------------*/
+.copyright {
+  text-align: right;
+  margin: 0 auto;
+  max-width: 90%;
+  padding: 0 2%;
+}
