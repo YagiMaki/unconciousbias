@@ -34,7 +34,7 @@ body {
   background:var(--white-color);
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 img {
@@ -42,12 +42,6 @@ img {
 	height: auto;/*高さ自動*/
   border-radius: 10%;
 }
-
-/* h1 {
-  font-size: 1.5em;
-  font-weight: normal;
-  text-align: center;
-} */
 
 h2 {
   position: relative;
@@ -139,7 +133,7 @@ section {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 95vh; /* 必要に応じて高さを調整してください */
+  height: 90vh; /* 必要に応じて高さを調整してください */
   display: flex;
   flex-direction: column;
   margin: 10px auto 0 auto;
@@ -159,7 +153,7 @@ footer {
 
 .mainimg  {
   position: relative; /* 追加 */
-  height: 300px;
+  height: 330px;
   overflow: hidden;
   border-radius: 15px; /* 角丸を適用 */
 }
@@ -168,7 +162,7 @@ footer {
   z-index:10;
   opacity: 0;
   width: 100%;
-  height: 300px;
+  height: 330px;
   background-position: center center;
   background-repeat: repeat;
   background-size: cover;
@@ -295,6 +289,7 @@ input[type="checkbox"]:checked + label {
   display: flex;
   flex-direction: row; /* 横に並べる */
   align-items: center;
+  margin: 10px auto; /* ボタン間のマージンを調整 */
   justify-content: center;
   flex-wrap: nowrap; /* 横並びを維持 */
 }
@@ -325,7 +320,7 @@ input[type="checkbox"]:checked + label {
 .abiasti, .bbiasti, .cbiasti, .dbiasti, .ebiasti {
   width: 400px;
   height: 60px;
-  margin: 50px auto 10px auto; 
+  margin: 30px auto 10px auto; 
   border-radius: 15px;
   border: none; /* ボーダーをなくす */
   text-align: center;
@@ -372,7 +367,7 @@ input[type="checkbox"]:checked + label {
   color: #fff; /* テキストの色を指定 */ 
   line-height: 2em;  /* 行の高さを指定する  */
   cursor: pointer;
-  margin: 50px auto 0 auto;
+  margin: 30px auto 0 auto;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
 }
 
@@ -400,7 +395,6 @@ input[type="checkbox"]:checked + label {
   color: #fff; /* テキストの色を指定 */ 
   line-height: 2em;  /* 行の高さを指定する  */
   cursor: pointer;
-  /* margin: 50px auto 0 auto; */
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
 }
 
@@ -414,7 +408,6 @@ input[type="checkbox"]:checked + label {
   color: #fff; /* テキストの色を指定 */ 
   line-height: 2em;  /* 行の高さを指定する  */
   cursor: pointer;
-  /* margin: 50px auto 0 auto; */
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
 }
 
@@ -422,7 +415,7 @@ input[type="checkbox"]:checked + label {
   display: flex;
   flex-direction: row;
   justify-content: center; /* 横方向に中央寄せ */
-  margin: 50px auto 0 auto;
+  margin: 30px auto 0 auto;
 }
 
 
@@ -455,7 +448,6 @@ input[type="checkbox"]:checked + label {
   text-align: center;
   font-size: 1.25em; /* テキストサイズの指定 */ 
   font-weight: bold;
-  height: 8vh;
 }
 
 .biasbox {
@@ -466,7 +458,7 @@ input[type="checkbox"]:checked + label {
   border-radius: 15px;
   padding: 10px;
   max-width: 90%;
-  margin: 0 auto 15px auto;
+  margin: 0 auto 8px auto;
 }
 
 .biasbox p {
@@ -481,12 +473,8 @@ input[type="checkbox"]:checked + label {
 }
 
 .small {
-  font-size: 15px; /* フォントサイズを小さく調整 */
-  /* padding: 5p 10px; パディングを小さく調整 */
-  /* text-align: right; */
+  font-size: 18px; /* フォントサイズを小さく調整 */
   text-align: center;
-  /* max-width: 90%;
-  padding: 0 2%; */
   color: #a52a2a;
   font-weight: bold;
 }
@@ -495,7 +483,7 @@ input[type="checkbox"]:checked + label {
 /*コピーライト
 -------------------------------------*/
 .copyright {
-  text-align: right;
+  text-align: center;
   margin: 0 auto;
   max-width: 90%;
   padding: 0 2%;
