@@ -26,8 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
   var cand = 0;
   var cane = 0;
 
-  // 10分のミリ秒数
-const tenMinutes = 10 * 60 * 1000;
+  // 30分のミリ秒数
+const tenMinutes = 30 * 60 * 1000;
 
 // ページロード時にタイマーをセット
 const reloadTimer = setTimeout(() => {
