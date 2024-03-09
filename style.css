@@ -357,6 +357,19 @@ input[type="checkbox"]:checked + label {
   margin-right: 0; /* 最後の要素には右側のマージンを適用しない */
 }
 
+.hokati {
+  height: 60px;
+  margin: 30px auto 10px auto; 
+  border-radius: 15px;
+  border: none; /* ボーダーをなくす */
+  text-align: center;
+  color: #666;
+  font-size: 28px; /* テキストサイズを指定 */
+  font-weight: bold; /* フォントを太くする */
+  line-height: 2.15em;  /* 行の高さを指定する  */
+  white-space: pre-line; /* 改行を適切に表示するために追加 */
+}
+
 .button {
   width: 280px;
   height: 50px;
@@ -401,7 +414,8 @@ input[type="checkbox"]:checked + label {
 .button04 {
   width: 280px;
   height: 50px;
-  background-color: #666666;
+  background-color: #666;
+  border:1px solid #666;
   border-radius: 15px;
   text-align: center;
   font-size: 1em; /* テキストサイズの指定 */ 
@@ -411,6 +425,33 @@ input[type="checkbox"]:checked + label {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
 }
 
+.button05 {
+  width: 280px;
+  height: 50px;
+  background-color: #fff;
+  border:1px solid #fff;
+  border-radius: 15px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1em; /* テキストサイズの指定 */ 
+  color: #555; /* テキストの色を指定 */ 
+  line-height: 2em;  /* 行の高さを指定する  */
+  cursor: pointer;
+}
+
+.button06 {
+  width: 280px;
+  height: 50px;
+  background-color: #a52a2a;
+  border:1px solid #a52a2a;
+  border-radius: 15px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1em; /* テキストサイズの指定 */ 
+  color: #fff; /* テキストの色を指定 */ 
+  line-height: 2em;  /* 行の高さを指定する  */
+  cursor: pointer;
+}
 .button-container {
   display: flex;
   flex-direction: row;
@@ -450,6 +491,16 @@ input[type="checkbox"]:checked + label {
   font-weight: bold;
 }
 
+.h3aka {
+  position: relative;
+  max-width: 90%;
+  margin: 5px auto 0 auto;
+  text-align: center;
+  font-size: 1.25em; /* テキストサイズの指定 */ 
+  font-weight: bold;
+  color: #a52a2a;
+}
+
 .biasbox {
   background:var(--white-color);
   border-width: 1px;
@@ -477,6 +528,10 @@ input[type="checkbox"]:checked + label {
   text-align: center;
   color: #a52a2a;
   font-weight: bold;
+}
+
+.ref {
+  font-size: 16px; /* フォントサイズを小さく調整 */
 }
 
 

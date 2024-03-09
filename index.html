@@ -28,11 +28,16 @@
     <h2>「アンコンシャスバイアス」って？</h2>
       <p>アンコンシャスバイアスとは、無意識の思い込みや偏見のことです。誰もが持っている脳の働きによるもので、自分の経験や無意識下の価値観に照らし合わせて、「この人はいつも〇〇だからこうだろう」「常識では〇〇だからこうだろう」といった判断を行います。そのことで無意識のうちに自分の成長の弊害になったり、人を傷つけたりすることも。まずは自分の中にあるバイアスに気づきませんか！</p>
       <br/>
-    <div id="btn00">
+    <div class="button-container">
+      <div id="btn13" class="button05">
         <p></p>
       </div>
-    <div id="btn01" class="button">
-      <p>スタート ▶▶</p>
+      <div id="btn01" class="button03">
+        <p>スタート ▶▶</p>
+      </div>
+      <div id="btn12">
+        <input type="button" class="button05" value="※ 参考文献はこちらから" onclick="openSection('ref');">
+      </div>
     </div>
   </section>
 
@@ -61,10 +66,15 @@
         <label for="biase01" class="label">いつも行くお気に入りの店</label><br>
       </div>
     </form>
-    <div id="btn02" class="button">
-      <p>次の質問へ ▶</p>
+    <div class="button-container">
+      <div id="btn10o" class="button02">
+        <p>◀ スタートへ戻る</p>
+      </div>
+      <div id="btn02" class="button03">
+        <p>次の質問へ ▶</p>
+        <p class=boldtext>〈01/08〉</p>
+      </div>
     </div>
-    <p class=boldtext>〈01/08〉</p>
   </section>
 
   <section  id="que02">
@@ -359,9 +369,13 @@
     バイアス" onclick="openSection('ans05');">
   </div>
   <br/>
+  <p class="h3aka">　　　　　　　　　　　　　　　アンケートにぜひご協力をお願いします！</p>
   <div class="button-container">
   <div id="btn10h" class="button02">
     <p>◀ スタートへ戻る</p>
+  </div>
+  <div id="btn13">
+    <input type="button" class="button06" value="アンケート回答" onclick="openSection('ple');">
   </div>
   </div>
 </section>
@@ -533,6 +547,49 @@
       </div>
 </section>
 
+<section id="ref">
+  <h2 class="hokati">参考文献</h2>
+    <p class="ref">
+      ・北村 英哉.あなたにもある無意識の偏見 アンコンシャスバイアス: アンコンシャス・バイアスからの脱出.河出書房新社.2021.194p<br>
+      ・鈴木 敏昭.人生の99％は思い込み―――支配された人生から脱却するための心理学.ダイヤモンド社.2015.288p<br>
+      ・ウィスコンシン大学マディソン校WISELI(科学・工学分野女性リーダーシップ研究所).バイアス習慣を断つためのワークショップ――ジェンダー公正を進める職場づくり.明石書店.2023.216p<br>
+      ・バウンド.こどもバイアス事典「思い込み」「決めつけ」「先入観」に気づける本.カンゼン.2022.128p<br>
+      ・鈴木 敏昭.「認知バイアス」を正しく活用する方法 私たちは思い込みから逃れられない?.総合法令出版.2022.300p<br>
+      ・トッド・ローズ.なぜ皆が同じ間違いをおかすのか 「集団の思い込み」を打ち砕く技術.NHK出版.2023.352p<br>
+      ・ジェニファー・エバーハート.無意識のバイアス――人はなぜ人種差別をするのか.明石書店.2021.376p<br>
+      ・ハワード・J・ロス.なぜあなたは自分の「偏見」に気づけないのか:逃れられないバイアスとの「共存」のために.原書房.2021.328p<br>
+      ・パク・スックチャ.アンコンシャス・バイアス―無意識の偏見― とは何か.ICE.2021.194p<br>
+      ・都築まきこ.本当にスゴイ！ 思い込みを変える魔法.ディスカバー・トゥエンティワン.2017.173p<br>
+      ・篠原 信.思考の枠を超える 自分の「思い込み」の外にある「アイデア」を見つける方法.日本実業出版社.2020.256p<br>
+      ・キム・ジヘ.差別はたいてい悪意のない人がする.大月書店.2021.256p<br>
+      ・西 剛志.あなたの世界をガラリと変える 認知バイアスの教科書.SBクリエイティブ.2023.339p<br>
+      ・潮村公弘.Explore Implicit プロジェクト.https://www.exploreimplicit.com/<br>
+      ・xica.サイカロン：アンコンシャスバイアスとは｜具体例で知る要因と改善方法、バイアスとの違い.https://xica.net/xicaron/unconscious-bias/<br>
+    </p>
+      <div class="button-container">
+      <div id="btn10n" class="button02">
+        <p>◀ スタートへ戻る</p>
+      </div>
+      </div>
+</section>
+
+<section id="ple">
+  <h2 class="hokati">アンケートにご協力をお願いします</h2>
+    <p>アンケート結果は、新商品や新サービス開発等のみに活用いたします。ご記載の個人情報は、紛失や漏洩等の発生防止に向けた積極的な安全対策を実施し、ご本人の許可なく第三者への提供はしません。</p>
+    <p class="h3aka">Googleフォーム「アンケート」はこちら</p>
+    <img src="url(./img/QR.jpg)" alt="Googleフォーム" width="400">
+    <p>タッチペン横の説明パネル内にもフォームへの二次元コードが印刷されています。ぜひご協力をよろしくお願いいたします。</p>
+    <br>
+    <br>
+      <div class="button-container">
+        <div id="btn10p" class="button02">
+          <p>◀ スタートへ戻る</p>
+        </div>
+        <div id="btn11e">
+          <input type="button" class="button04" value="結果を再表示" onclick="openSection('que09');">
+        </div>
+        </div>
+</section>
 
 <footer>
   <div class="copyright">

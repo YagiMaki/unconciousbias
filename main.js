@@ -26,8 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
   var cand = 0;
   var cane = 0;
 
-  // 30分のミリ秒数
-const tenMinutes = 30 * 60 * 1000;
+  // 20分のミリ秒数
+const tenMinutes = 20 * 60 * 1000;
 
 // ページロード時にタイマーをセット
 const reloadTimer = setTimeout(() => {
@@ -273,6 +273,8 @@ if (btn09) {
     }
 
     // ボタンにクリックイベントを追加
+    document.getElementById("btn10n").addEventListener("click", reloadPage);  
+    document.getElementById("btn10o").addEventListener("click", reloadPage);  
     document.getElementById("btn10a").addEventListener("click", reloadPage);
     document.getElementById("btn10b").addEventListener("click", reloadPage);
     document.getElementById("btn10c").addEventListener("click", reloadPage);
@@ -286,7 +288,7 @@ if (btn09) {
     document.getElementById("btn10k").addEventListener("click", reloadPage);
     document.getElementById("btn10l").addEventListener("click", reloadPage);
     document.getElementById("btn10m").addEventListener("click", reloadPage);  
- 
-        
+    document.getElementById("btn10p").addEventListener("click", reloadPage); 
+    
   }
   );
