@@ -494,7 +494,8 @@ input[type="checkbox"]:checked + label {
 .h3aka {
   position: relative;
   max-width: 90%;
-  margin: 5px auto 0 auto;
+  margin: 0px auto 0 auto;
+  height: 40px;
   text-align: center;
   font-size: 1.25em; /* テキストサイズの指定 */ 
   font-weight: bold;
